@@ -38,7 +38,7 @@ class CreditResource(
             .collect(Collectors.toList()))
     }
 
-    @GetMapping("/creditCode")
+    @GetMapping("/{creditCode}")
     fun findByCreditCode(
         @RequestParam(value = "customerId") customerId: Long,
         @PathVariable creditCode: UUID
